@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+:root {
+  --title-primary: hsl(240, 6%, 13%);
+  --text-primary: hsl(240, 5%, 7%);
+  --brand-primary: hsl(195, 91%, 25%);
+
+  --text-base: 1.6rem;
+  --text-sm: 1.4rem;
+  
+  font-size: 62.5%;
+}
+
+html {
+  font: 400 var(--text-base)/160% "Mulish", sans-serif;
+  color: var(--text-primary);
+}
+
+h1, h2, h3 {
+  font-size: 2.4rem;
+  color: var(--title-primary);
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+.text-sm {
+  font-size: var(--text-sm);
+}
+
+header {
+  background-color: var(--brand-primary);
+  padding: 0.5rem;
+}
+
+header .container {
+  max-width: 43rem;
+  display: flex;
+  gap: 2.6rem;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+header .container form input {
+  background: hsla(0, 0%, 100%, 0.2);
+  border: none;
+  height: 4.2rem;
+  border-radius: 3%;
+  width: 24rem;
+}
+
+header .container form input::placeholder {
+  color: hsl(0, 0%, 100%);
+  font-family: 'Mulish', sans-serif;
+  opacity: 0.8;
+  padding-left: 1.4rem;
+}
+
+header .container img {
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+}
+
+main {
+  max-width: 43.0rem;
+}
+
+main img {
+  max-width: 43rem;
+  border-radius: 0 0 2% 2%;
+}
+
+main h1 {
+  padding: 3.2rem;
+}
+
+main .buttons {
+  margin-left: 3.2rem;
+  margin-bottom: 3rem;
+}
+
+button {
+  all: unset;
+  transition: all 300ms;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+main p {
+  font-family: 'Mulish', sans-serif;
+  font-size: 1.6rem;
+  display: flex;
+  padding: 0.5rem;
+  max-width: 40rem;
+  margin-left: 2rem;
+}
+
+aside h2 {
+  font-family: 'Mulish', sans-serif;
+  margin-top: 3.4rem;
+  margin-bottom: 2.4rem;
+  margin-left: 3.2rem;
+}
+
+aside img {
+  border-radius: 3%;
+}
+
+aside h3 {
+  margin-bottom: 1.5rem;
+}
+
+aside p {
+  font-size: 1.4rem;
+}
+
+aside .container {
+  font-family: 'Mulish',sans-serif;
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.4rem;
+  max-width: 43rem;
+}
+
+footer {
+  background-color: var(--brand-primary);
+  padding: 1.2rem 2.8rem;
+  display: flex;
+  max-width: 43.0rem;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  color: hsl(0, 0%, 100%);
+  font-family: 'Mulish', sans-serif;
+  font-size: 1.2rem;
+}
+
+
+
+@media (width > 1020px) {
+  #app {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main aside"
+    "footer footer";
+  }
+
+  header .container, .container {
+    max-width: initial;
+    margin: initial;
+    padding: initial;
+  }
+  
+  header {
+    grid-area: header;
+    padding: 0.5rem;
+  }
+
+  header .container form {
+    width: 70%;
+  }
+  
+  header .container form input {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  aside {
+    grid-area: aside;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+
+  footer {
+    max-width: 100%;
+  }
+}
